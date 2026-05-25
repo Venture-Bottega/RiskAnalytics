@@ -1,9 +1,9 @@
 {
-  "name": "urban-shift",
+  "name": "risk-analytics",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://yelenashabanova.github.io/urban-shift/",
+  "homepage": "https://yelenashabanova.github.io/RiskAnalytics/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
