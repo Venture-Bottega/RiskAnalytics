@@ -1,0 +1,15 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# ── Raw data (large files – not pushed to GitHub) ────────────────────────────
+# All raw datasets are excluded; only data/processed/ is committed.
+data/raw/
+
+# ── Node ──────────────────────────────────────────────────────────────────────
+risk-prospect/node_modules/
+risk-prospect/dist/
+
+# ── macOS ─────────────────────────────────────────────────────────────────────
+.DS_Store

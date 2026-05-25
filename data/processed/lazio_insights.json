@@ -1,0 +1,22 @@
+{
+  "regions": [
+    "Toscana",
+    "Umbria",
+    "Lazio",
+    "Abruzzo"
+  ],
+  "n_comuni": 1048,
+  "score_version": "civil_v1",
+  "weights": {
+    "seismic": 0.25,
+    "flood_ls": 0.3,
+    "wildfire": 0.15,
+    "vuln": 0.2,
+    "infra": 0.1
+  },
+  "score": {
+    "min": 14.5,
+    "median": 32.05,
+    "max": 69.5
+  }
+}
