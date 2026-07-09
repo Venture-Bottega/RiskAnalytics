@@ -2,8 +2,6 @@
 
 > Civil Protection Risk Prioritization for Central Italy
 
-**Live demo →** [yelenashabanova.github.io/RiskAnalytics](https://yelenashabanova.github.io/RiskAnalytics/)
-
 ---
 
 ## What is RiskWatch Italia?
