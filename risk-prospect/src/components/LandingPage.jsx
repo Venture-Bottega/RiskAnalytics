@@ -92,7 +92,7 @@ export default function LandingPage({ onEnter }) {
 
     const PORTAL_URL = typeof window !== 'undefined' && window.location.hostname === 'localhost' 
         ? 'http://localhost:5173' 
-        : 'https://urban-prospect.vercel.app';
+        : 'https://urban-prospect-81u8.vercel.app';
 
     return (
         <div style={{ minHeight: '100vh', background: '#120e0d', color: '#ede8e6', fontFamily: "'Georgia', 'Times New Roman', serif", overflowX: 'hidden', position: 'relative' }}>
