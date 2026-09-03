@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
+import { cartoTiles, BASEMAP_ATTRIBUTION } from '../utils/basemap'
 import neighborhoods from '../data/lazio_neighborhoods.json'
 
 const dataMap = Object.fromEntries(neighborhoods.map(n => [n.id, n]))
@@ -41,12 +42,14 @@ export default function MapView({ neighborhoods: data, selectedId, compareIds = 
             zoomControl: true, attributionControl: true,
         })
 
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
-            attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/">CARTO</a>',
+        L.tileLayer(cartoTiles('light_nolabels'), {
+            attribution: BASEMAP_ATTRIBUTION,
             subdomains: 'abcd', maxZoom: 19,
         }).addTo(map)
 
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png', {
+        // Labels ride on top of the base layer, which already carries the
+        // attribution — Leaflet would otherwise print it twice.
+        L.tileLayer(cartoTiles('light_only_labels'), {
             attribution: '', subdomains: 'abcd', maxZoom: 19, pane: 'overlayPane',
         }).addTo(map)
 
